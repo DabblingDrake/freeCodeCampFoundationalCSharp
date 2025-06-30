@@ -4,10 +4,8 @@
 // Microsoft Modules: https://learn.microsoft.com/en-us/collections/xjxyhptrm0o8d?&sharingId=788B7A6C9C9F3BD2
 
 
-
+//----------------------------------------------------------------------------------------------------
 // Get started with C#, Part 1, Modlule 1: Write your first C#
-using System.Security.Cryptography.X509Certificates;
-
 System.Console.WriteLine("\nfreeCodeCamp Foundation C#\n\n\nGet started with C#, Part 1\n----------------------------------------------------------------------------------------------------");
 Console.WriteLine("----Part 1, Module 1, Unit 4: Challenge Activity"); // Write code in the .NET Editor to display two messages
 Console.Write("This is the "); 
@@ -134,8 +132,7 @@ System.Console.WriteLine();
 
 System.Console.WriteLine("\nGetting started with C#, Part 2\n----------------------------------------------------------------------------------------------------");
 // Get started with C#, Part 2, Module 2: Create and run simple console applications
-// Challenge Acttivity
-Console.WriteLine("----Part 2, Module 2, Unit 5: Challenge Activity"); 
+Console.WriteLine("----Part 2, Module 2, Unit 5: Challenge Activity"); // discover and implement a method call
 int firstValue= 500;
 int secondValue = 600;
 int largerValue;
@@ -145,4 +142,43 @@ largerValue = Math.Max(firstValue, secondValue);
 Console.WriteLine(largerValue);
 System.Console.WriteLine();
 
-Console.WriteLine("----Part 2, Module 3, Unit 4: Challenge Activity"); 
+//----------------------------------------------------------------------------------------------------
+// Get started with C#, Part 2, Module 3: Add decision logic to your code using if, else, and else it statement in C#
+Console.WriteLine("----Part 2, Module 3, Unit 4: Challenge Activity"); // Improve renewal rate of subscriptions
+Random random = new Random();
+// int daysUntilExpiration = 5;
+int daysUntilExpiration = random.Next(12);
+int discountPercentage = 0;
+Console.WriteLine(daysUntilExpiration);
+if (daysUntilExpiration <= 05)
+{
+    if (daysUntilExpiration <= 1)
+    {
+        discountPercentage = 20;
+    }
+    else
+    {
+        discountPercentage = 10;
+    }
+}
+
+if (daysUntilExpiration == 0)
+{
+    Console.WriteLine("Your subscription has expired.");
+}
+else if (daysUntilExpiration <= 1)
+{
+    Console.WriteLine($"Your subscription expires within a day!\nRenew now and save {discountPercentage}%!");
+}
+else if (daysUntilExpiration <= 5)
+{
+    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.\nRenew now and save {discountPercentage}%");
+}
+else if (daysUntilExpiration <= 10)
+{
+    Console.WriteLine("Your subscription will expire soon. Renew now!");
+}
+
+//----------------------------------------------------------------------------------------------------
+// Get started with C#, Part 2, Module 4: Store and Iterate Through Sequences of Data Using Arrays and the foreach Statments in C#
+Console.WriteLine("----Part 2, Module 3, Unit 4: Challenge Activity"); // Improve renewal rate of subscriptions
