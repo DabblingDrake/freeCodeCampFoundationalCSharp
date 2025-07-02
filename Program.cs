@@ -149,7 +149,7 @@ Random random = new Random();
 // int daysUntilExpiration = 5;
 int daysUntilExpiration = random.Next(12);
 int discountPercentage = 0;
-Console.WriteLine(daysUntilExpiration);
+// Console.WriteLine(daysUntilExpiration);
 if (daysUntilExpiration <= 05)
 {
     if (daysUntilExpiration <= 1)
@@ -181,5 +181,18 @@ else if (daysUntilExpiration <= 10)
 
 //----------------------------------------------------------------------------------------------------
 // Get started with C#, Part 2, Module 4: Store and Iterate Through Sequences of Data Using Arrays and the foreach Statments in C#
-Console.WriteLine("----Part 2, Module 3, Unit 4: Challenge Activity"); // Improve renewal rate of subscriptions
-// Test Comment
+Console.WriteLine("\n----Part 2, Module 4, Unit 4: Challenge Activity"); // Report the Order IDs that need further investigation
+
+string[] orderIDs = ["B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"];
+foreach (string orderID in orderIDs)
+{
+    if (orderID.StartsWith("B"))
+    {
+        Console.WriteLine($"{orderID}");
+    }
+
+}
+
+//----------------------------------------------------------------------------------------------------
+// Get started with C#, Part 2, Module 5: 
+Console.WriteLine("\n----Part 2, Module 5, Unit : Challenge Activity"); //
