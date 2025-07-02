@@ -346,10 +346,127 @@ foreach (string name in studentNames)
     Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
 }
 
-Console.WriteLine("Press the Enter key to continue");
-Console.ReadLine();
+// Console.WriteLine("Press the Enter key to continue");
+// Console.ReadLine();
 
 
 //----------------------------------------------------------------------------------------------------
 // Get started with C#, Part 2, Module 7:  Challenge Project - Develop foreach and if-elseif-else Structures to Process Array Data in C#
 Console.WriteLine("\n----Part 2, Module 7: Challenge Project"); // Develop foreach and if-elseif-else Structures to Process Array Data in C#
+
+int numExamAssignments = 5;
+
+string[] studentFirstNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
+
+int[] sophScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+int[] andrScores = new int[] { 92, 89, 81, 96, 90, 89 };
+int[] emmScores = new int[]  { 90, 85, 87, 98, 68, 89, 89, 89 };
+int[] logScores = new int[]  { 90, 95, 87, 88, 96, 96 };
+
+int[] studentGradedScores = new int[10];
+
+string currentStudentNameLetterGrade = "";
+
+Console.WriteLine("Student\t\tExam Score\tOverall Grade\tExtra Credit\n");
+
+// Student         Exam Score      Overall Grade   Extra Credit
+
+// Sophia          92.2            95.88   A       92 (3.68 pts)
+// Andrew          89.6            91.38   A-      89 (1.78 pts)
+// Emma            85.6            90.94   A-      89 (5.34 pts)
+// Logan           91.2            93.12   A       96 (1.92 pts)
+
+foreach (string name in studentFirstNames)
+{
+    string currentStudentName = name;
+
+    if (currentStudentName == "Sophia")
+        studentGradedScores = sophScores;
+
+    else if (currentStudentName == "Andrew")
+        studentGradedScores = andrScores;
+
+    else if (currentStudentName == "Emma")
+        studentGradedScores = emmScores;
+
+    else if (currentStudentName == "Logan")
+        studentGradedScores = logScores;
+
+    decimal totalSumAssignmentScores = 0;
+
+    decimal currentStudentNameGrade = 0m;
+
+    int totalGradedAssignments = 0;
+
+    decimal totalExamAssignmentScore = 0;
+
+    decimal extraCreditScore = 0;
+
+    decimal extraCreditAssignments = 0;
+
+    foreach (decimal score in studentGradedScores)
+    {
+        totalGradedAssignments += 1;
+
+        if (totalGradedAssignments <= numExamAssignments)
+        {
+            totalSumAssignmentScores += score;
+            totalExamAssignmentScore += score;
+        }
+        else
+            totalSumAssignmentScores += score / 10;
+            extraCreditScore = score;
+
+    }
+
+    extraCreditAssignments = totalGradedAssignments - numExamAssignments;
+    currentStudentNameGrade = (decimal)totalSumAssignmentScores / numExamAssignments;
+
+    if (currentStudentNameGrade >= 97)
+        currentStudentNameLetterGrade = "A+";
+
+    else if (currentStudentNameGrade >= 93)
+        currentStudentNameLetterGrade = "A";
+
+    else if (currentStudentNameGrade >= 90)
+        currentStudentNameLetterGrade = "A-";
+
+    else if (currentStudentNameGrade >= 87)
+        currentStudentNameLetterGrade = "B+";
+
+    else if (currentStudentNameGrade >= 83)
+        currentStudentNameLetterGrade = "B";
+
+    else if (currentStudentNameGrade >= 80)
+        currentStudentNameLetterGrade = "B-";
+
+    else if (currentStudentNameGrade >= 77)
+        currentStudentNameLetterGrade = "C+";
+
+    else if (currentStudentNameGrade >= 73)
+        currentStudentNameLetterGrade = "C";
+
+    else if (currentStudentNameGrade >= 70)
+        currentStudentNameLetterGrade = "C-";
+
+    else if (currentStudentNameGrade >= 67)
+        currentStudentNameLetterGrade = "D+";
+
+    else if (currentStudentNameGrade >= 63)
+        currentStudentNameLetterGrade = "D";
+
+    else if (currentStudentNameGrade >= 60)
+        currentStudentNameLetterGrade = "D-";
+
+    else
+        currentStudentNameLetterGrade = "F";
+
+    Console.WriteLine($"{currentStudentName}\t\t{(decimal)totalExamAssignmentScore / numExamAssignments}\t\t{currentStudentNameGrade}\t{currentStudentNameLetterGrade}\t{extraCreditScore} ({currentStudentNameGrade - (decimal)totalExamAssignmentScore / numExamAssignments} pts)");
+    // Console.WriteLine($"Total Exam score {totalSumAssignmentScores}, Number of Exams: {numExamAssignments}");
+}
+
+Console.WriteLine("\n\rPress the Enter key to continue");
+Console.ReadLine();
+
+
+
