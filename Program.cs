@@ -194,5 +194,33 @@ foreach (string orderID in orderIDs)
 }
 
 //----------------------------------------------------------------------------------------------------
-// Get started with C#, Part 2, Module 5: 
-Console.WriteLine("\n----Part 2, Module 5, Unit : Challenge Activity"); //
+// Get started with C#, Part 2, Module 5:  Create readable code with conventions, whitespace, and comments in C# 
+Console.WriteLine("\n----Part 2, Module 5, Unit 5: Challenge Activity"); // apply style guidelines to improve readability
+
+
+/*
+This code iterates through a given string and reverses it 
+and then counts the number of times the lett "o" appears in it.
+
+*/
+string str = "The quick brown fox jumps over the lazy dog.";
+
+char[] charMessage = str.ToCharArray();
+
+Array.Reverse(charMessage);
+
+int x = 0;
+
+foreach (char i in charMessage)
+{
+    if (i == 'o')
+    {
+        x++;
+    }
+}
+
+string new_message = new String(charMessage);
+
+Console.WriteLine(new_message);
+
+Console.WriteLine($"'o' appears {x} times.");
