@@ -465,8 +465,34 @@ foreach (string name in studentFirstNames)
     // Console.WriteLine($"Total Exam score {totalSumAssignmentScores}, Number of Exams: {numExamAssignments}");
 }
 
-Console.WriteLine("\n\rPress the Enter key to continue");
-Console.ReadLine();
+// Console.WriteLine("\n\rPress the Enter key to continue");
+// Console.ReadLine();
+
+System.Console.WriteLine("\nGetting started with C#, Part 3:\n----------------------------------------------------------------------------------------------------");
+//----------------------------------------------------------------------------------------------------
+// Get started with C#, Part 3, Module 1, Unit 4: Evaluate Boolean expressions to make decisions in C# 
+Console.WriteLine("\n----Part 3, Module 1, Unit 4: Challenge Activity"); // write code to display the result of a coin flip
+
+Random coinToss = new();
+int coinTossResult = coinToss.Next(0, 2);
+Console.WriteLine($"{(coinTossResult == 1 ? "Heads" : "Tails")}");
 
 
+//----------------------------------------------------------------------------------------------------
+// Get started with C#, Part 3, Module 1, Unit 6: Evaluate Boolean expressions to make decisions in C# 
+Console.WriteLine("\n----Part 3, Module 1, Unit 6: Challenge Actvity"); // Decision logic challenge
 
+string permission = "Admin";
+int level = 65;
+if (permission.Contains("Admin"))
+{
+    Console.WriteLine(level > 55 ? "Welcome, Super Admin user." : "Welcome, Admin user.");
+}
+else if (permission.Contains("Manager"))
+{
+    Console.WriteLine(level >= 20 ? "Contact an Admin for access." : "You do not have sufficient privileges.");
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.");
+}
