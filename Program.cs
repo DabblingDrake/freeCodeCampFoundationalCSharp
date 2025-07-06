@@ -496,3 +496,7 @@ else
 {
     Console.WriteLine("You do not have sufficient privileges.");
 }
+
+//----------------------------------------------------------------------------------------------------
+// Get started with C#, Part 3, Module 2, Unit 4: Control variable scope and logic using code blocks in C#
+Console.WriteLine("\n----Part 3, Module 2, Unit 4: Challenge Actvity"); //
