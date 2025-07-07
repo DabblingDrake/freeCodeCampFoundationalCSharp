@@ -531,48 +531,6 @@ string type = "";
 string color = "";
 string size = "";
 
-switch (product[0])
-{
-    case "01":
-        type = "Sweat shirt";
-        break;
-    case "02":
-        type = "T-Shirt";
-        break;
-    case "03":
-        type = "Sweat pants";
-        break;
-    default:
-        type = "Other";
-        break;
-}
-switch (product[1])
-{
-    case "BL":
-        color = "Blacksize";
-        break;
-    case "MN":
-        color = "Maroon";
-        break;
-    default:
-        color = "White";
-        break;
-}
-switch (product[2])
-{
-    case "S":
-        size = "Small";
-        break;
-    case "M":
-        size = "Medium";
-        break;
-    case "L":
-        size = "Large";
-        break;
-    default:
-        size = "One Size Fits All";
-        break;
-}
 // if (product[0] == "01")
 // {
 //     type = "Sweat shirt";
@@ -615,4 +573,64 @@ switch (product[2])
 //     size = "One Size Fits All";
 // }
 
+switch (product[0])
+{
+    case "01":
+        type = "Sweat shirt";
+        break;
+    case "02":
+        type = "T-Shirt";
+        break;
+    case "03":
+        type = "Sweat pants";
+        break;
+    default:
+        type = "Other";
+        break;
+}
+switch (product[1])
+{
+    case "BL":
+        color = "Blacksize";
+        break;
+    case "MN":
+        color = "Maroon";
+        break;
+    default:
+        color = "White";
+        break;
+}
+switch (product[2])
+{
+    case "S":
+        size = "Small";
+        break;
+    case "M":
+        size = "Medium";
+        break;
+    case "L":
+        size = "Large";
+        break;
+    default:
+        size = "One Size Fits All";
+        break;
+}
 Console.WriteLine($"Product: {size} {color} {type}");
+
+//----------------------------------------------------------------------------------------------------
+// Get started with C#, Part 3, Module 4: Iterate through a code block using for statement in C#
+Console.WriteLine("\n----Part 3, Module 4, Unit 3: Challenge Actvity"); // rewrite if-elseif-else using a switch statement
+
+// Divisible by: 3 = Fizz, 5 = Buzz, Both FizzBuzz
+string byThree = "Fizz", byFive = "Buzz";
+for (int i = 1; i <= 100; i++)
+{
+    if (i % 3 == 0 && i % 5 == 0)
+        Console.WriteLine($"{i} - {byThree}{byFive}");
+    if (i % 5 == 0)
+        Console.WriteLine($"{i} - {byFive}");
+    if (i % 3 == 0)
+        Console.WriteLine($"{i} - {byThree}");
+    else
+        Console.WriteLine(i);
+}
