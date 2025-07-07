@@ -470,7 +470,7 @@ foreach (string name in studentFirstNames)
 
 System.Console.WriteLine("\nGetting started with C#, Part 3:\n----------------------------------------------------------------------------------------------------");
 //----------------------------------------------------------------------------------------------------
-// Get started with C#, Part 3, Module 1, Unit 4: Evaluate Boolean expressions to make decisions in C# 
+// Get started with C#, Part 3, Module 1: Evaluate Boolean expressions to make decisions in C# 
 Console.WriteLine("\n----Part 3, Module 1, Unit 4: Challenge Activity"); // write code to display the result of a coin flip
 
 Random coinToss = new();
@@ -479,7 +479,7 @@ Console.WriteLine($"{(coinTossResult == 1 ? "Heads" : "Tails")}");
 
 
 //----------------------------------------------------------------------------------------------------
-// Get started with C#, Part 3, Module 1, Unit 6: Evaluate Boolean expressions to make decisions in C# 
+// Get started with C#, Part 3, Module 1: Evaluate Boolean expressions to make decisions in C# 
 Console.WriteLine("\n----Part 3, Module 1, Unit 6: Challenge Actvity"); // Decision logic challenge
 
 string permission = "Admin";
@@ -498,5 +498,121 @@ else
 }
 
 //----------------------------------------------------------------------------------------------------
-// Get started with C#, Part 3, Module 2, Unit 4: Control variable scope and logic using code blocks in C#
-Console.WriteLine("\n----Part 3, Module 2, Unit 4: Challenge Actvity"); //
+// Get started with C#, Part 3, Module 2: Control variable scope and logic using code blocks in C#
+Console.WriteLine("\n----Part 3, Module 2, Unit 4: Challenge Actvity"); // Update problematic code in the code editor
+
+int[] numbers = { 4, 8, 15, 16, 23, 42 };
+int total = 0;
+foreach (int number in numbers)
+{
+    total += number;
+
+    if (number == 42)
+    {
+        bool found = true; // Should move this to below total and intialize with false
+        if (found) //this could be moved down to where it was originaly. 
+        { // could remove curley braces
+            Console.WriteLine("Set contains 42");
+        }
+    }
+
+}
+Console.WriteLine($"Total: {total}");
+
+//----------------------------------------------------------------------------------------------------
+// Get started with C#, Part 3, Module 3: Branch the Flow of Code Using the switch-case Construct in C#
+Console.WriteLine("\n----Part 3, Module 3, Unit 3: Challenge Actvity"); // rewrite if-elseif-else using a switch statement
+
+string sku = "01-MN-L";
+
+string[] product = sku.Split('-');
+
+string type = "";
+string color = "";
+string size = "";
+
+switch (product[0])
+{
+    case "01":
+        type = "Sweat shirt";
+        break;
+    case "02":
+        type = "T-Shirt";
+        break;
+    case "03":
+        type = "Sweat pants";
+        break;
+    default:
+        type = "Other";
+        break;
+}
+switch (product[1])
+{
+    case "BL":
+        color = "Blacksize";
+        break;
+    case "MN":
+        color = "Maroon";
+        break;
+    default:
+        color = "White";
+        break;
+}
+switch (product[2])
+{
+    case "S":
+        size = "Small";
+        break;
+    case "M":
+        size = "Medium";
+        break;
+    case "L":
+        size = "Large";
+        break;
+    default:
+        size = "One Size Fits All";
+        break;
+}
+// if (product[0] == "01")
+// {
+//     type = "Sweat shirt";
+// }
+// else if (product[0] == "02")
+// {
+//     type = "T-Shirt";
+// }
+// else if (product[0] == "03")
+// {
+//     type = "Sweat pants";
+// }
+// else
+// {
+//     type = "Other";
+// }
+
+// if (product[1] == "BL")
+// {
+//     color = "Black";
+// } else if (product[1] == "MN")
+// {
+//     color = "Maroon";
+// } else
+// {
+//     color = "White";
+// }
+
+// if (product[2] == "S")
+// {
+//     size = "Small";
+// } else if (product[2] == "M")
+// {
+//     size = "Medium";
+// } else if (product[2] == "L")
+// {
+//     size = "Large";
+// } else
+// {
+//     size = "One Size Fits All";
+// }
+
+Console.WriteLine($"Product: {size} {color} {type}");
