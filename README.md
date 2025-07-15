@@ -33,4 +33,5 @@ Part 3: Add Logic to C# Applications
 
 Part 4: Work with Variable Data in C# Console Applications
 - Moduel 1: Choose the Correct Data Type in Your C# Code
-
+- Moduel 2: Convert Data Ypes using Castng and Conversion Techniques in C#
+- 
