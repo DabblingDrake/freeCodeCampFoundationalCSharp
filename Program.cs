@@ -6,6 +6,9 @@
 
 //----------------------------------------------------------------------------------------------------
 // Get started with C#, Part 1, Modlule 1: Write your first C#
+using System.Runtime.InteropServices;
+using Microsoft.VisualBasic;
+
 System.Console.WriteLine("\nfreeCodeCamp Foundation C#\n\n\nGet started with C#, Part 1\n----------------------------------------------------------------------------------------------------");
 Console.WriteLine("----Part 1, Module 1, Unit 4: Challenge Activity"); // Write code in the .NET Editor to display two messages
 Console.Write("This is the "); 
@@ -468,7 +471,7 @@ foreach (string name in studentFirstNames)
 // Console.WriteLine("\n\rPress the Enter key to continue");
 // Console.ReadLine();
 
-System.Console.WriteLine("\nGetting started with C#, Part 3:\n----------------------------------------------------------------------------------------------------");
+System.Console.WriteLine("\nGetting started with C#, Part 3\n----------------------------------------------------------------------------------------------------");
 //----------------------------------------------------------------------------------------------------
 // Get started with C#, Part 3, Module 1: Evaluate Boolean expressions to make decisions in C# 
 Console.WriteLine("\n----Part 3, Module 1, Unit 4: Challenge Activity"); // write code to display the result of a coin flip
@@ -618,8 +621,8 @@ switch (product[2])
 Console.WriteLine($"Product: {size} {color} {type}");
 
 //----------------------------------------------------------------------------------------------------
-// Get started with C#, Part 3, Module 4: Iterate through a code block using for statement in C#
-Console.WriteLine("\n----Part 3, Module 4, Unit 3: Challenge Actvity"); // rewrite if-elseif-else using a switch statement
+// Get started with C#, Part 3, Module 3: Iterate through a code block using for statement in C#
+Console.WriteLine("\n----Part 3, Module 3, Unit 3: Challenge Actvity"); // rewrite if-elseif-else using a switch statement
 
 // Divisible by: 3 = Fizz, 5 = Buzz, Both FizzBuzz
 string byThree = "Fizz", byFive = "Buzz";
@@ -634,3 +637,30 @@ for (int i = 1; i <= 100; i++)
     else
         Console.WriteLine(i);
 }
+
+System.Console.WriteLine("\nGetting started with C#, Part 4\n----------------------------------------------------------------------------------------------------");
+//----------------------------------------------------------------------------------------------------
+// Get started with C#, Part 4, Module 2: Convert Data Types Using Casting and Conversion Techniques in C#
+Console.WriteLine("\n----Part 4, Module 2, Unit 4: Challenge Activity"); // Complete a challenge to combine string array values as strings and as integers
+
+string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+string stringMessage = "";
+Decimal strTotal = 0.0m; // my solution
+Decimal numTotal = 0.0m;
+for (int i = 0; i < values.Length; i++)
+{
+    //decimal strTotal; their solution
+    if (decimal.TryParse(values[i], out strTotal))
+    {
+        numTotal += strTotal;
+        // System.Console.WriteLine(values[i]);
+    }
+    else
+        stringMessage += values[i];
+
+}
+System.Console.WriteLine($"Message: {stringMessage}");
+System.Console.WriteLine($"Total: {numTotal}");
+
+// Get started with C#, Part 4, Module 2: Convert Data Types Using Casting and Conversion Techniques in C#
+Console.WriteLine("\n----Part 4, Module 2, Unit 6: Challenge Activity"); // Complete a challenge to output math operations as specific number types
