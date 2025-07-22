@@ -688,4 +688,52 @@ float result3 = value3 / value1;
 Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
 
 // Get started with C#, Part 4, Module 3: Perform Operations on Arrays Using Helper Methods in C#
-Console.WriteLine("\n----Part 4, Module 3, Unit : Challenge Activity"); // 
+Console.WriteLine("\n----Part 4, Module 3, Unit 5: Challenge Activity"); // Complete a challenge to reverse words in a sentence
+
+// Output shoulod be "ehT kciuq nworb xof spmuj revo eht yzal god"
+string pangram = "The quick brown fox jumps over the lazy dog";
+string[] words = pangram.Split(' ');
+string reverseChars = "";
+string reverseResults = "";
+
+foreach (string word in words)
+{
+    char[] chars = word.ToCharArray();
+    Array.Reverse(chars);
+
+    reverseChars = string.Join("", chars);
+    System.Console.Write($"{reverseChars} ");
+}
+ // This is their solution.
+string[] newWords = new string[words.Length];
+for (int i = 0; i < words.Length; i++)
+{
+    char[] chars = words[i].ToCharArray();
+    Array.Reverse(chars);
+    newWords[i] = new string(chars);
+}
+string reverseResultsz = String.Join(" ", newWords);
+System.Console.WriteLine("\n"+reverseResultsz);
+
+
+// Get started with C#, Part 4, Module 3: Perform Operations on Arrays Using Helper Methods in C#
+Console.WriteLine("\n----Part 4, Module 3, Unit 7: Challenge Activity"); // Complete a challenge to parse a string of orders, sort the orders and tag possible errors
+/* 
+A345
+B123
+B177
+B179
+C15     - Error
+C234
+C235
+G3003   - Error
+ */
+
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+string[] orderIDNumber = orderStream.Split(',');
+Array.Sort(orderIDNumber);
+for (int i = 0; i < orderIDNumber.Length; i++)
+{
+    orderIDNumber[i] = orderIDNumber[i].Length != 4 ? orderIDNumber[i] = orderIDNumber[i] + "\t- Error" : orderIDNumber[i] = orderIDNumber[i];
+    System.Console.WriteLine(orderIDNumber[i]);
+}
