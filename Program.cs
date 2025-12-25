@@ -737,3 +737,59 @@ for (int i = 0; i < orderIDNumber.Length; i++)
     orderIDNumber[i] = orderIDNumber[i].Length != 4 ? orderIDNumber[i] = orderIDNumber[i] + "\t- Error" : orderIDNumber[i] = orderIDNumber[i];
     System.Console.WriteLine(orderIDNumber[i]);
 }
+
+// Get started with C#, Part 4, Module 4: Format alphanumeric data for presentation in C# 
+Console.WriteLine("\n----Part 4, Module 4, Unit 5: Challenge Activity"); // Complete a challenge to apply string interpolation to a form letter
+
+
+/* string l1 = "Dear Ms. Barros,";
+string l2 = "As a customer of our Magic Yield offering we are excited to tell you about a new financial product that would dramatically increase your return.";
+
+string l3 = "Currently, you own 2,975,000.00 shares at a return of 12.75%.";
+
+string l4 = "Our new product, Glorious Future offers a return of 13.13%.  Given your current volume, your potential profit would be ¤63,000,000.00.";
+
+// Here's a quick comparison:
+
+// Magic Yield         12.75%   $55,000,000.00      
+// Glorious Future     13.13%   $63,000,000.00   */
+
+
+string customerName = "Ms. Barros";
+
+string currentProduct = "Magic Yield";
+int currentShares = 2975000;
+decimal currentReturn = 0.1275m;
+decimal currentProfit = 55000000.0m;
+
+string newProduct = "Glorious Future";
+decimal newReturn = 0.13125m;
+decimal newProfit = 63000000.0m;
+
+// Your logic here
+System.Console.WriteLine($"Dear {customerName},\nAs a customer of our Magic Yield offering we are excited to tell you about a new financial product that would dramatically increase your return.");
+System.Console.WriteLine($"\nCurrently, you own {currentShares:N2} shares at a return of {currentReturn:P2}.");
+System.Console.WriteLine($"\nOur new product, Glorious Future offers a return of {newReturn:P2}.  Given your current volume, your potential profit would be {newProfit:C}.");
+Console.WriteLine("\nHere's a quick comparison:\n");
+
+string comparisonMessage = "";
+
+// Your logic here
+comparisonMessage += string.Format($"{currentProduct.PadRight(20)}{currentReturn.ToString("P2").PadRight(9)}{currentProfit:C}");
+comparisonMessage += string.Format($"\n{newProduct.PadRight(20)}{newReturn.ToString("P2").PadRight(9)}{newProfit:C}");
+
+Console.WriteLine(comparisonMessage);
+
+// Get started with C#, Part 4, Module 5: Modify the content of strings using built-in string data type methods in C#
+Console.WriteLine("\n----Part 4, Module 5, Unit 5: Challenge Activity"); // Extract, replace, and remove data from an input string
+
+const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+
+string quantity = "";
+string output = "";
+
+// Your work here
+
+Console.WriteLine(quantity);
+Console.WriteLine(output);
+
